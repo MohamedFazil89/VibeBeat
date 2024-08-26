@@ -1,38 +1,58 @@
-.App {
-  text-align: center;
+*{
+  margin: 0;
+  padding: 0;
+}
+*::selection{
+  background-color: transparent;
+}
+:root{
+  --backgroundImage: url("./assets/phonk-5000x3000-17900.jpg")
+
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+body {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  height: 100vh;
+  overflow-y: hidden;
+  background-repeat: no-repeat;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  background-color: rgb(13,13,13);
+
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* background: var(--backgroundImage); */
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    /* background-color: rgba(0, 0, 0, 0.6); */
+    z-index: -1;
+    filter: blur(10px) drop-shadow(0 0 10px black);
+    display: flex;
+    flex-wrap: wrap;
+    flex-grow: 1;
+
+  }
 }
 
-.App-link {
-  color: #61dafb;
+.Back{
+  position: fixed;
+  left: 0;
+  cursor: pointer;
+  fill: white;
+  transform: translateY(-1000%);
 }
+.Front{
+  position: fixed;
+  right: 0;
+  cursor: pointer;
+  fill: white;
+  transform: translateY(-1000%);
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }
