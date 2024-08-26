@@ -26,18 +26,10 @@ export default function Card({ Drift, Next, Prev }) {
     setIsPlaying(!isPlaying);
   };
 
-  const handleKey = (e) =>{
-    if(e.key === " "){
-        handlePlayPause();
-    }else if(e.key === "ArrowRight"){
-        Next();
-    }else if(e.key === "ArrowLeft"){
-        Prev();
-    }
-  }
+ 
 
   return (
-    <div className="card" tabIndex={0} onKeyUp={handleKey}>
+    <div className="card" >
       <div className="Text-side">
         <h2>{Drift.name}</h2>
         <p>song by {Drift.artist}</p>
