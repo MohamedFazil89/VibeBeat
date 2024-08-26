@@ -20,6 +20,7 @@ function App() {
     setCurrentSong((prev) =>( prev === 0 ? 0 : prev - 1))
   
   }
+  
 
   return (
     <div className="App">

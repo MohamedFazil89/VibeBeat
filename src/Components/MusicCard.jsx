@@ -46,7 +46,7 @@ export default function Card({ Drift }) {
           )}
         </div>
       </div>
-      <audio ref={audioRef} />
+      <audio ref={audioRef} autoPlay />
     </div>
   );
 }
